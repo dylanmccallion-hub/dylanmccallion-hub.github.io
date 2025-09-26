@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - My Portfolio</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Dylan McCallion</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#about">About Me</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+                <li class="nav-item"><a class="nav-link active" href="#">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="videos.html">Videos</a></li>
+                <li class="nav-item"><a class="nav-link" href="cv/Dylan McCallion CV.pdf" download>CV</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="container">
+    <section>
+        <h1 class="text-success text-center mb-5 fade-in">Projects</h1>
+        <div class="grid-container">
+            <!-- Example Project Card -->
+            <div class="project-card">
+                <img src="images/homepage.png" alt="home_page">
+                <div class="card-body"> 
+                    <h5 class="card-title text-success">Database Management System</h5>
+                    <p class="card-text">A web based application for performing CRUD operations on an SQL database using REST API. Written using PHP, Javascript, CSS, HTML.</p>
+                    <a href="https://github.com/dylanmccallion-hub/DatabaseManagementSystem" class="btn btn-outline-success btn-sm">View Code</a>
+                    <a href="#" class="btn btn-outline-warning btn-sm demo-btn" data-video="videos/dbmanagementdemo.mp4">Demo</a>
+
+
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="images/hardware.png" alt="hardware">
+                <div class="card-body">
+                    <h5 class="card-title text-success">Smart Caddy System</h5>
+                    <p class="card-text">IoT project built with Arduino for reading values from coffee/sugar caddy and displaying data in various screens of Android Application.</p>
+                    <a href="https://github.com/dylanmccallion-hub/SmartCaddySystem" class="btn btn-outline-success btn-sm">View Code</a>
+                    <a href="#" class="btn btn-outline-warning btn-sm demo-btn" data-video="videos/caddy_demo.mp4">Demo</a>
+
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="images/home_screen.png" alt="home_screen">
+                <div class="card-body"> 
+                    <h5 class="card-title text-success">Home Climate Control System</h5>
+                    <p class="card-text">Home climate control system to adjust home heating temperature based on current room temperature. Android app connects to Arduino which measures room temperature. Application sets temperature based on this value. Also reads humidity.</p>
+                    <a href="https://github.com/dylanmccallion-hub/HomeClimateControlSystem" class="btn btn-outline-success btn-sm">View Code</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="images/coffeeDiagram.png" alt="coffeeDiagram">
+                <div class="card-body">
+                    <h5 class="card-title text-success">Simulated Coffee Machine</h5>
+                    <p class="card-text">Simulated coffee machine built using Arduino. Written in C++ using Arduino IDE.</p>
+                    <a href="https://github.com/dylanmccallion-hub/SimulatedCoffeeMachine" class="btn btn-outline-success btn-sm">View Code</a>
+                    <a href="#" class="btn btn-outline-warning btn-sm demo-btn" data-video="videos/coffee_demo.mp4">Demo</a>
+
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="images/to-do_image.png" alt="to-do_image">
+                <div class="card-body"> 
+                    <h5 class="card-title text-success">To-Do List Application</h5>
+                    <p class="card-text">A simple To-Do List application developed using Android Studio. Features include: Dark/Light mode toggle, font selection, custom toast effects.</p>
+                    <a href="https://github.com/dylanmccallion-hub/To-DoListApp" class="btn btn-outline-success btn-sm">View Code</a>
+                    <a href="#" class="btn btn-outline-warning btn-sm demo-btn" data-video="videos/to-do_demo.mp4">Demo</a>
+
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="images/weather_pi_screen.png" alt="weather_pi_screen">
+                <div class="card-body">
+                    <h5 class="card-title text-success">Raspberry Pi Weather Station</h5>
+                    <p class="card-text">Simple weather station application for reading weather data from Raspberry Pi. Data displayed on HTML page to display data styled with CSS.</p>
+                    <a href="github.com/dylanmccallion-hub/WeatherPiApp" class="btn btn-outline-success btn-sm">View Code</a>
+                </div>
+            </div>
+
+            <!-- Add more projects here -->
+        </div>
+    </section>
+
+    <!-- Video Modal -->
+    <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="videoModalLabel">Demo Video</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <video id="videoPlayer" width="100%" controls>
+                    <source src="" type="video/mp4">
+                    Your browser does not support HTML video.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</main>
+
+<footer class="bg-dark text-white text-center p-3">
+    <p>&copy; 2025 Dylan McCallion. All rights reserved.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

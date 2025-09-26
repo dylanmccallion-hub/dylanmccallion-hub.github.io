@@ -1,0 +1,211 @@
+/* =========================
+   Global Layout & Body
+========================= */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px; /* height of navbar */
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 3rem auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+footer {
+    background-color: #212529;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* =========================
+   Skills & Contact
+========================= */
+.skills-list li {
+    margin-bottom: 0.5rem;
+}
+
+#contact a i {
+    color: inherit;
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+/* Hover effect: change color and scale */
+#contact a:hover i {
+    transform: scale(1.4);
+}
+
+/* Common circular button style */
+.circle-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #62C462;
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.circle-btn:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 15px rgba(0,0,0,0.3), 0 0 10px rgba(255,255,255,0.2);
+}
+
+.circle-btn.gmail:hover {
+    background-color: #D44638;
+    box-shadow: 0 0 15px #D44638, 0 0 10px rgba(255,255,255,0.2);
+}
+
+.circle-btn.linkedin:hover {
+    background-color: #0A66C2;
+    box-shadow: 0 0 15px #0A66C2, 0 0 10px rgba(255,255,255,0.2);
+}
+
+.circle-btn.github:hover {
+    background-color: #171515;
+    box-shadow: 0 0 15px #171515, 0 0 10px rgba(255,255,255,0.2);
+}
+
+.contact-label {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #62C462;
+}
+
+/* =========================
+   Animations
+========================= */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInHero 1.5s forwards;
+    animation-delay: 0.2s;
+}
+
+@keyframes fadeInHero {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-100px);
+    animation: slideInLeft 1s forwards;
+}
+
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(100px);
+    animation: slideInRight 1s forwards;
+}
+
+@keyframes slideInLeft {
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* Optional stagger effect */
+.slide-in-left, .slide-in-right {
+    animation-delay: 0.2s;
+}
+
+/* =========================
+   Projects / Video Grid
+========================= */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.project-card,
+.video-card {
+    background-color: #32383E;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: 1px solid #F89406;
+    transition: transform 0.3s, box-shadow 0.3s;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s forwards;
+}
+
+.project-card:hover,
+.video-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.project-card img,
+.video-card iframe {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.video-card iframe {
+    height: 200px; /* adjust if needed */
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+.btn {
+    margin-right: 0.5rem;
+}
+
+.grid-container .project-card:nth-child(1),
+.grid-container .video-card:nth-child(1) { animation-delay: 0.2s; }
+.grid-container .project-card:nth-child(2),
+.grid-container .video-card:nth-child(2) { animation-delay: 0.4s; }
+.grid-container .project-card:nth-child(3),
+.grid-container .video-card:nth-child(3) { animation-delay: 0.6s; }
+.grid-container .project-card:nth-child(4),
+.grid-container .video-card:nth-child(4) { animation-delay: 0.8s; }
+.grid-container .project-card:nth-child(5) { animation-delay: 1s; }
+.grid-container .project-card:nth-child(6) { animation-delay: 1.2s; }
+
+@keyframes fadeInUp {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================
+   Video Modal
+========================= */
+#videoModal video {
+    width: 100%;
+    height: auto;
+    max-height: 80vh;  /* Prevent video from being too tall */
+    object-fit: contain;
+}
