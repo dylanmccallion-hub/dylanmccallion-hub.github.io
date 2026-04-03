@@ -6,15 +6,40 @@
     <title>Projects - My Portfolio</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
+
+    <style>
+        .project-points {
+            padding-left: 18px;
+            margin-bottom: 8px;
+        }
+
+        .project-points li {
+            font-size: 0.9rem;
+            margin-bottom: 4px;
+        }
+
+        .tech-stack {
+            display: inline-block;
+            background-color: #198754;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            margin-top: 8px;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            transition: 0.3s ease;
+        }
+    </style>
 </head>
 <body>
 
-<!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <div class="container-fluid">
         <a class="navbar-brand" href="index.html">Dylan McCallion</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -35,123 +60,148 @@
     <section>
         <h1 class="text-success text-center mb-5 fade-in">Projects</h1>
         <div class="grid-container">
-            <!-- Example Project Card -->
+
+            <!-- Smart Mirror -->
             <div class="project-card">
-                <img src="images/mirrorDevice.jpg" alt="project_image">
+                <img src="images/mirrorDevice.jpg">
                 <div class="card-body">
-                    <h5 class="card-title text-success">Smart Mirror System with Android Application Integration</h5>
-                    <p class="card-text">Developed a customised smart mirror system using MagicMirror² running on a Raspberry Pi, integrated with an Android application for real-time data communication. Implemented bidirectional data exchange to dynamically update mirror modules based on user input from the mobile app. Focused on system integration, real-time updates, and user interaction.
+                    <h5 class="card-title text-success">Smart Mirror System</h5>
 
-Technologies: Raspberry Pi, MagicMirror², Android (Java), REST API</p>
-                    <a href="https://github.com/dylanmccallion-hub/mirrormirror" class="btn btn-outline-success btn-sm">View Code</a>
-                    <a href="#" class="btn btn-outline-warning btn-sm demo-btn" data-video="videos/mirrorVideo.mp4">Demo</a>
+                    <ul class="project-points">
+                        <li>Built a smart mirror using Raspberry Pi and MagicMirror²</li>
+                        <li>Integrated Android app for real-time communication</li>
+                        <li>Enabled dynamic UI updates based on user input</li>
+                    </ul>
+
+                    <span class="tech-stack">Raspberry Pi • Android • REST API</span><br>
+
+                    <a href="https://github.com/dylanmccallion-hub/mirrormirror" class="btn btn-outline-success btn-sm mt-2">View Code</a>
+                    <a href="#" class="btn btn-outline-warning btn-sm mt-2 demo-btn" data-video="videos/mirrorVideo.mp4">Demo</a>
                 </div>
             </div>
+
+            <!-- Database System -->
             <div class="project-card">
-                <img src="images/homepage.png" alt="home_page">
-                <div class="card-body"> 
+                <img src="images/homepage.png">
+                <div class="card-body">
                     <h5 class="card-title text-success">Database Management System</h5>
-                    <p class="card-text">Designed and built a web-based database management application enabling full CRUD operations via a RESTful API. Developed backend functionality in PHP and created a responsive frontend using JavaScript, HTML, and CSS. Implemented structured API endpoints and client-side validation to ensure efficient and secure data handling.
 
-Technologies: PHP, JavaScript, SQL, HTML, CSS, REST API</p>
-                    <a href="https://github.com/dylanmccallion-hub/DatabaseManagementSystem" class="btn btn-outline-success btn-sm">View Code</a>
-                    <a href="#" class="btn btn-outline-warning btn-sm demo-btn" data-video="videos/dbmanagementdemo.mp4">Demo</a>
+                    <ul class="project-points">
+                        <li>Developed full CRUD web app using REST API</li>
+                        <li>Built backend in PHP with structured endpoints</li>
+                        <li>Created responsive frontend with validation</li>
+                    </ul>
 
+                    <span class="tech-stack">PHP • SQL • JavaScript • REST API</span><br>
 
+                    <a href="https://github.com/dylanmccallion-hub/DatabaseManagementSystem" class="btn btn-outline-success btn-sm mt-2">View Code</a>
+                    <a href="#" class="btn btn-outline-warning btn-sm mt-2 demo-btn" data-video="videos/dbmanagementdemo.mp4">Demo</a>
                 </div>
             </div>
 
+            <!-- Smart Caddy -->
             <div class="project-card">
-                <img src="images/hardware.png" alt="hardware">
+                <img src="images/hardware.png">
                 <div class="card-body">
                     <h5 class="card-title text-success">Smart Caddy System</h5>
-                    <p class="card-text">Created an IoT-based smart caddy system using Arduino to monitor and measure contents (e.g., coffee/sugar levels). Integrated the system with an Android application to display real-time data across multiple screens. Focused on sensor integration, data transmission, and mobile UI updates.
 
-Technologies: Arduino, C++, Android, IoT sensors</p>
-                    <a href="https://github.com/dylanmccallion-hub/SmartCaddySystem" class="btn btn-outline-success btn-sm">View Code</a>
-                    <a href="#" class="btn btn-outline-warning btn-sm demo-btn" data-video="videos/caddy_demo.mp4">Demo</a>
+                    <ul class="project-points">
+                        <li>Built IoT system to monitor container levels</li>
+                        <li>Used sensors to collect real-time data</li>
+                        <li>Displayed data in Android application</li>
+                    </ul>
 
+                    <span class="tech-stack">Arduino • C++ • Android • IoT</span><br>
+
+                    <a href="https://github.com/dylanmccallion-hub/SmartCaddySystem" class="btn btn-outline-success btn-sm mt-2">View Code</a>
+                    <a href="#" class="btn btn-outline-warning btn-sm mt-2 demo-btn" data-video="videos/caddy_demo.mp4">Demo</a>
                 </div>
             </div>
 
+            <!-- Climate Control -->
             <div class="project-card">
-                <img src="images/home_screen.png" alt="home_screen">
-                <div class="card-body"> 
-                    <h5 class="card-title text-success">Home Climate Control System</h5>
-                    <p class="card-text">Built a smart home climate control system that adjusts heating based on real-time room temperature and humidity readings. Developed an Android application to communicate with an Arduino device, enabling automated and user-defined temperature control. Emphasised sensor accuracy, real-time responsiveness, and user interaction.
+                <img src="images/home_screen.png">
+                <div class="card-body">
+                    <h5 class="card-title text-success">Home Climate Control</h5>
 
-Technologies: Arduino, Android (Java), Temperature & Humidity Sensors</p>
-                    <a href="https://github.com/dylanmccallion-hub/HomeClimateControlSystem" class="btn btn-outline-success btn-sm">View Code</a>
+                    <ul class="project-points">
+                        <li>Automated heating based on temperature & humidity</li>
+                        <li>Connected Arduino sensors to Android app</li>
+                        <li>Enabled real-time monitoring and control</li>
+                    </ul>
+
+                    <span class="tech-stack">Arduino • Android • Sensors</span><br>
+
+                    <a href="https://github.com/dylanmccallion-hub/HomeClimateControlSystem" class="btn btn-outline-success btn-sm mt-2">View Code</a>
                 </div>
             </div>
 
+            <!-- Coffee Machine -->
             <div class="project-card">
-                <img src="images/coffeeDiagram.png" alt="coffeeDiagram">
+                <img src="images/coffeeDiagram.png">
                 <div class="card-body">
                     <h5 class="card-title text-success">Simulated Coffee Machine</h5>
-                    <p class="card-text">Developed a simulated coffee machine using Arduino, programmed in C++ via the Arduino IDE. Implemented logic to replicate real-world machine operations, including input handling and process sequencing. Focused on embedded programming and system behaviour simulation.
 
-Technologies: Arduino, C++</p>
-                    <a href="https://github.com/dylanmccallion-hub/SimulatedCoffeeMachine" class="btn btn-outline-success btn-sm">View Code</a>
-                    <a href="#" class="btn btn-outline-warning btn-sm demo-btn" data-video="videos/coffee_demo.mp4">Demo</a>
+                    <ul class="project-points">
+                        <li>Simulated machine logic using Arduino</li>
+                        <li>Implemented state-based operation flow</li>
+                        <li>Handled user input and sequencing</li>
+                    </ul>
 
+                    <span class="tech-stack">Arduino • C++</span><br>
+
+                    <a href="https://github.com/dylanmccallion-hub/SimulatedCoffeeMachine" class="btn btn-outline-success btn-sm mt-2">View Code</a>
+                    <a href="#" class="btn btn-outline-warning btn-sm mt-2 demo-btn" data-video="videos/coffee_demo.mp4">Demo</a>
                 </div>
             </div>
 
+            <!-- To-Do App -->
             <div class="project-card">
-                <img src="images/to-do_image.png" alt="to-do_image">
-                <div class="card-body"> 
-                    <h5 class="card-title text-success">To-Do List Application</h5>
-                    <p class="card-text">Designed and developed a mobile to-do list application using Android Studio. Implemented features such as dark/light mode toggle, custom font selection, and enhanced user feedback through custom toast messages. Focused on UI/UX design and user personalisation.
-
-Technologies: Android Studio, Java, UI/UX Design</p>
-                    <a href="https://github.com/dylanmccallion-hub/To-DoListApp" class="btn btn-outline-success btn-sm">View Code</a>
-                    <a href="#" class="btn btn-outline-warning btn-sm demo-btn" data-video="videos/to-do_demo.mp4">Demo</a>
-
-                </div>
-            </div>
-
-            <div class="project-card">
-                <img src="images/weather_pi_screen.png" alt="weather_pi_screen">
+                <img src="images/to-do_image.png">
                 <div class="card-body">
-                    <h5 class="card-title text-success">Raspberry Pi Weather Station</h5>
-                    <p class="card-text">Built a weather station application using Raspberry Pi to collect and display environmental data. Developed a web interface to present the data in real time, styled using HTML and CSS. Focused on data acquisition, processing, and clear visual presentation.
+                    <h5 class="card-title text-success">To-Do List App</h5>
 
-Technologies: Raspberry Pi, HTML, CSS</p>
-                    <a href="<a href="https://github.com/dylanmccallion-hub/WeatherPiApp"" class="btn btn-outline-success btn-sm">View Code</a>
+                    <ul class="project-points">
+                        <li>Built Android productivity application</li>
+                        <li>Implemented dark/light mode toggle</li>
+                        <li>Added custom UI features and feedback</li>
+                    </ul>
+
+                    <span class="tech-stack">Android • Java • UI/UX</span><br>
+
+                    <a href="https://github.com/dylanmccallion-hub/To-DoListApp" class="btn btn-outline-success btn-sm mt-2">View Code</a>
+                    <a href="#" class="btn btn-outline-warning btn-sm mt-2 demo-btn" data-video="videos/to-do_demo.mp4">Demo</a>
                 </div>
             </div>
 
-            <!-- Add more projects here -->
+            <!-- Weather Station -->
+            <div class="project-card">
+                <img src="images/weather_pi_screen.png">
+                <div class="card-body">
+                    <h5 class="card-title text-success">Weather Station</h5>
+
+                    <ul class="project-points">
+                        <li>Collected environmental data using Raspberry Pi</li>
+                        <li>Displayed real-time data on web interface</li>
+                        <li>Focused on data visualisation and clarity</li>
+                    </ul>
+
+                    <span class="tech-stack">Raspberry Pi • HTML • CSS</span><br>
+
+                    <a href="https://github.com/dylanmccallion-hub/WeatherPiApp" class="btn btn-outline-success btn-sm mt-2">View Code</a>
+                </div>
+            </div>
+
         </div>
     </section>
-
-    <!-- Video Modal -->
-    <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content bg-dark text-white">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="videoModalLabel">Demo Video</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <video id="videoPlayer" width="100%" controls>
-                    <source src="" type="video/mp4">
-                    Your browser does not support HTML video.
-                    </video>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
 </main>
 
 <footer class="bg-dark text-white text-center p-3">
     <p>&copy; 2026 Dylan McCallion. All rights reserved.</p>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/main.js"></script>
+
 </body>
 </html>
